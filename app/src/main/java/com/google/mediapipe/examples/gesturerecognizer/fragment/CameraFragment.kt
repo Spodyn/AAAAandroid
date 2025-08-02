@@ -3,13 +3,14 @@ package com.google.mediapipe.examples.gesturerecognizer.fragment
 import android.annotation.SuppressLint
 import android.content.res.Configuration
 import android.os.Bundle
-import android.os.CountDownTimer
 import android.os.Handler
 import android.os.Looper
 import android.util.Log
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
+import android.widget.Button
+import android.widget.TextView
 import android.widget.Toast
 import androidx.camera.core.*
 import androidx.camera.lifecycle.ProcessCameraProvider
@@ -19,18 +20,15 @@ import androidx.fragment.app.Fragment
 import androidx.fragment.app.activityViewModels
 import androidx.navigation.fragment.findNavController
 import com.google.mediapipe.examples.gesturerecognizer.*
-import com.google.mediapipe.examples.gesturerecognizer.R
 import com.google.mediapipe.examples.gesturerecognizer.databinding.FragmentCameraBinding
 import com.google.mediapipe.tasks.vision.core.RunningMode
 import java.util.concurrent.ExecutorService
 import java.util.concurrent.Executors
 import java.util.concurrent.TimeUnit
+import com.google.mediapipe.examples.gesturerecognizer.R
+
 
 class CameraFragment : Fragment(), GestureRecognizerHelper.GestureRecognizerListener {
-
-    private companion object {
-        private const val TAG = "Hand gesture recognizer"
-    }
 
     private var _binding: FragmentCameraBinding? = null
     private val binding get() = _binding!!
@@ -45,8 +43,12 @@ class CameraFragment : Fragment(), GestureRecognizerHelper.GestureRecognizerList
     private var cameraFacing = CameraSelector.LENS_FACING_FRONT
 
     private lateinit var backgroundExecutor: ExecutorService
+    private lateinit var gameResultOverlay: View
+    private lateinit var yourGestureContainer: View
+    private lateinit var yourGestureValue: TextView
 
-    private var countDownTimer: CountDownTimer? = null
+    private val roundHandler = Handler(Looper.getMainLooper())
+    private var countdownSeconds = 3
 
     override fun onResume() {
         super.onResume()
@@ -64,7 +66,6 @@ class CameraFragment : Fragment(), GestureRecognizerHelper.GestureRecognizerList
     override fun onPause() {
         super.onPause()
         if (this::gestureRecognizerHelper.isInitialized) {
-            viewModel.setDelegate(gestureRecognizerHelper.currentDelegate)
             backgroundExecutor.execute { gestureRecognizerHelper.clearGestureRecognizer() }
         }
     }
@@ -74,14 +75,9 @@ class CameraFragment : Fragment(), GestureRecognizerHelper.GestureRecognizerList
         _binding = null
         backgroundExecutor.shutdown()
         backgroundExecutor.awaitTermination(Long.MAX_VALUE, TimeUnit.NANOSECONDS)
-        countDownTimer?.cancel()
     }
 
-    override fun onCreateView(
-        inflater: LayoutInflater,
-        container: ViewGroup?,
-        savedInstanceState: Bundle?
-    ): View {
+    override fun onCreateView(inflater: LayoutInflater, container: ViewGroup?, savedInstanceState: Bundle?): View {
         _binding = FragmentCameraBinding.inflate(inflater, container, false)
         return binding.root
     }
@@ -91,9 +87,7 @@ class CameraFragment : Fragment(), GestureRecognizerHelper.GestureRecognizerList
         super.onViewCreated(view, savedInstanceState)
         backgroundExecutor = Executors.newSingleThreadExecutor()
 
-        binding.viewFinder.post {
-            setUpCamera()
-        }
+        binding.viewFinder.post { setUpCamera() }
 
         backgroundExecutor.execute {
             gestureRecognizerHelper = GestureRecognizerHelper(
@@ -107,114 +101,133 @@ class CameraFragment : Fragment(), GestureRecognizerHelper.GestureRecognizerList
             )
         }
 
-        setupGameControls()
+        gameResultOverlay = binding.root.findViewById(R.id.gameResultOverlay)
+        yourGestureContainer = binding.root.findViewById(R.id.your_gesture_container)
+        yourGestureValue = binding.root.findViewById(R.id.your_gesture_value)
+
+        gameResultOverlay.findViewById<Button>(R.id.playAgainButton).setOnClickListener {
+            hideGameResultOverlay()
+            viewModel.resetGame()
+            Handler(Looper.getMainLooper()).postDelayed({ startNewRound() }, 500)
+        }
+
+        gameResultOverlay.findViewById<Button>(R.id.backToMenuButton).setOnClickListener {
+            hideGameResultOverlay()
+            findNavController().navigate(R.id.action_camera_to_menu)
+        }
+
         observeViewModel()
 
-        // Rozpocznij grę po wejściu na ekran
         viewModel.resetGame()
         startNewRound()
     }
 
-    private fun setupGameControls() {
-        binding.playAgainButton.setOnClickListener {
-            viewModel.resetGame()
-            startNewRound()
-        }
-        binding.backToMenuButton.setOnClickListener {
-            findNavController().navigate(R.id.action_camera_to_menu)
-        }
-    }
-
     private fun observeViewModel() {
-        viewModel.playerScore.observe(viewLifecycleOwner) { score ->
-            binding.playerScoreText.text = "Ty: $score"
-        }
-
-        viewModel.botScore.observe(viewLifecycleOwner) { score ->
-            binding.botScoreText.text = "Bot: $score"
-        }
-
-        viewModel.gameMessage.observe(viewLifecycleOwner) { message ->
-            binding.gameMessageText.text = message
-        }
-
-        viewModel.gameState.observe(viewLifecycleOwner) { state ->
-            binding.gameOverGroup.isVisible = state == GameState.GAME_OVER
-            if (state != GameState.SHOW_RESULT) {
-                binding.botMoveImage.visibility = View.INVISIBLE
+        viewModel.playerScore.observe(viewLifecycleOwner) { binding.playerScoreText.text = "You: $it" }
+        viewModel.botScore.observe(viewLifecycleOwner) { binding.botScoreText.text = "Bot: $it" }
+        viewModel.gameMessage.observe(viewLifecycleOwner) { binding.gameMessageText.text = it }
+        viewModel.playerMove.observe(viewLifecycleOwner) { move ->
+            if (move != Move.NONE) {
+                yourGestureContainer.visibility = View.VISIBLE
+                yourGestureValue.visibility = View.VISIBLE
+                val gestureName = when (move) {
+                    Move.ROCK -> "Rock"
+                    Move.PAPER -> "Paper"
+                    Move.SCISSORS -> "Scissors"
+                    else -> ""
+                }
+                yourGestureValue.text = gestureName
+            } else {
+                yourGestureValue.text = ""
+                yourGestureValue.visibility = View.GONE
             }
         }
-
         viewModel.botMove.observe(viewLifecycleOwner) { move ->
-            val botMoveDrawable = when (move) {
+            val drawable = when (move) {
                 Move.ROCK -> R.drawable.ic_rock
                 Move.PAPER -> R.drawable.ic_paper
                 Move.SCISSORS -> R.drawable.ic_scissors
                 else -> 0
             }
-            if (botMoveDrawable != 0) {
-                binding.botMoveImage.setImageResource(botMoveDrawable)
+            if (drawable != 0) {
+                binding.botMoveImage.setImageResource(drawable)
                 binding.botMoveImage.visibility = View.VISIBLE
             }
         }
     }
 
+    private fun showGameResultOverlay() {
+        val player = viewModel.playerScore.value ?: 0
+        val bot = viewModel.botScore.value ?: 0
+
+        val scoreText = gameResultOverlay.findViewById<TextView>(R.id.dialogScore)
+        scoreText.text = "You $player : $bot Bot"
+
+        gameResultOverlay.visibility = View.VISIBLE
+    }
+
+    private fun hideGameResultOverlay() {
+        gameResultOverlay.visibility = View.GONE
+    }
+
     private fun startNewRound() {
         viewModel.setGameState(GameState.COUNTDOWN)
-        viewModel.setPlayerMove(Move.NONE) // Resetuj ruch gracza na początku rundy
+        viewModel.setPlayerMove(Move.NONE)
 
-        countDownTimer = object : CountDownTimer(4000, 1000) { // 4s total, 1s interval
-            override fun onTick(millisUntilFinished: Long) {
-                val secondsLeft = millisUntilFinished / 1000
-                if (secondsLeft > 0) {
-                    viewModel.setGameMessage(secondsLeft.toString())
-                } else {
-                    viewModel.setGameMessage("Pokaż!")
-                }
-            }
+        countdownSeconds = 3
+        showCountdownTick()
+    }
 
-            override fun onFinish() {
-                processResult()
+    private fun showCountdownTick() {
+        when (countdownSeconds) {
+            3 -> viewModel.setGameMessage("3")
+            2 -> viewModel.setGameMessage("2")
+            1 -> viewModel.setGameMessage("1")
+            0 -> {
+                viewModel.setGameMessage("Show!")
+                roundHandler.postDelayed({ processResult() }, 500)
+                return
             }
-        }.start()
+        }
+
+        countdownSeconds--
+        roundHandler.postDelayed({ showCountdownTick() }, 1000)
     }
 
     private fun processResult() {
         viewModel.setGameState(GameState.AWAITING_RESULT)
 
-        // Dajmy MediaPipe chwilę na ostatnie rozpoznanie
         Handler(Looper.getMainLooper()).postDelayed({
-            // Bot wykonuje swój ruch
             viewModel.generateBotMove()
-            // Określ zwycięzcę
             viewModel.determineWinner()
 
-            // Zmień stan na pokazywanie wyniku
-            viewModel.setGameState(GameState.SHOW_RESULT)
+            val playerScore = viewModel.playerScore.value ?: 0
+            val botScore = viewModel.botScore.value ?: 0
 
-            // Jeśli gra nie jest skończona, zacznij nową rundę po 2 sekundach
-            if (viewModel.gameState.value != GameState.GAME_OVER) {
-                Handler(Looper.getMainLooper()).postDelayed({
-                    startNewRound()
-                }, 2000)
+            if (playerScore >= viewModel.maxScore || botScore >= viewModel.maxScore) {
+                viewModel.setGameState(GameState.GAME_OVER)
+                showGameResultOverlay()
+                return@postDelayed
             }
-        }, 500) // 0.5s opóźnienia
+
+            viewModel.setPlayerMove(Move.NONE) // Reset gesture after round
+
+            viewModel.setGameState(GameState.SHOW_RESULT)
+            Handler(Looper.getMainLooper()).postDelayed({ startNewRound() }, 1000)
+        }, 500)
     }
 
     private fun setUpCamera() {
         val cameraProviderFuture = ProcessCameraProvider.getInstance(requireContext())
-        cameraProviderFuture.addListener(
-            {
-                cameraProvider = cameraProviderFuture.get()
-                bindCameraUseCases()
-            }, ContextCompat.getMainExecutor(requireContext())
-        )
+        cameraProviderFuture.addListener({
+            cameraProvider = cameraProviderFuture.get()
+            bindCameraUseCases()
+        }, ContextCompat.getMainExecutor(requireContext()))
     }
 
     @SuppressLint("UnsafeOptInUsageError")
     private fun bindCameraUseCases() {
-        val cameraProvider = cameraProvider
-            ?: throw IllegalStateException("Camera initialization failed.")
+        val cameraProvider = cameraProvider ?: throw IllegalStateException("Camera initialization failed.")
         val cameraSelector = CameraSelector.Builder().requireLensFacing(cameraFacing).build()
 
         preview = Preview.Builder()
@@ -229,9 +242,7 @@ class CameraFragment : Fragment(), GestureRecognizerHelper.GestureRecognizerList
             .setOutputImageFormat(ImageAnalysis.OUTPUT_IMAGE_FORMAT_RGBA_8888)
             .build()
             .also {
-                it.setAnalyzer(backgroundExecutor) { image ->
-                    recognizeHand(image)
-                }
+                it.setAnalyzer(backgroundExecutor) { image -> recognizeHand(image) }
             }
 
         cameraProvider.unbindAll()
@@ -240,7 +251,7 @@ class CameraFragment : Fragment(), GestureRecognizerHelper.GestureRecognizerList
             camera = cameraProvider.bindToLifecycle(this, cameraSelector, preview, imageAnalyzer)
             preview?.setSurfaceProvider(binding.viewFinder.surfaceProvider)
         } catch (exc: Exception) {
-            Log.e(TAG, "Use case binding failed", exc)
+            Log.e("CameraFragment", "Use case binding failed", exc)
         }
     }
 
@@ -257,19 +268,12 @@ class CameraFragment : Fragment(), GestureRecognizerHelper.GestureRecognizerList
 
     override fun onResults(resultBundle: GestureRecognizerHelper.ResultBundle) {
         activity?.runOnUiThread {
-            // Upewnij się, że binding wciąż istnieje (zabezpieczenie)
-            if (_binding == null) {
-                return@runOnUiThread
-            }
+            if (_binding == null) return@runOnUiThread
 
-            // 1. Przeniesiona logika - teraz wszystko dzieje się w bezpiecznym wątku UI
-            // Przetwarzaj wynik tylko w odpowiednim stanie gry
             if (viewModel.gameState.value == GameState.COUNTDOWN || viewModel.gameState.value == GameState.AWAITING_RESULT) {
                 val gestureName = resultBundle.results.firstOrNull()
                     ?.gestures()?.firstOrNull()
-                    ?.firstOrNull()
-                    ?.categoryName()
-                    ?: ""
+                    ?.firstOrNull()?.categoryName() ?: ""
 
                 val move = when (gestureName) {
                     "Open_Palm" -> Move.PAPER
@@ -278,31 +282,18 @@ class CameraFragment : Fragment(), GestureRecognizerHelper.GestureRecognizerList
                     else -> Move.NONE
                 }
 
-                if (move != Move.NONE) {
-                    // Ta linia powodowała błąd - teraz jest w bezpiecznym miejscu
-                    viewModel.setPlayerMove(move)
-                }
+                if (move != Move.NONE) viewModel.setPlayerMove(move)
             }
 
-            // 2. Logika rysowania (z poprzednich poprawek)
-            // Sprawdź, czy są jakiekolwiek wyniki, zanim ich użyjesz
             if (resultBundle.results.isNotEmpty()) {
                 val result = resultBundle.results.first()
-                // Rysuj tylko, jeśli w wyniku są punkty dłoni
                 if (result.landmarks().isNotEmpty()) {
-                    binding.overlay.setResults(
-                        result,
-                        resultBundle.inputImageHeight,
-                        resultBundle.inputImageWidth,
-                        RunningMode.LIVE_STREAM
-                    )
+                    binding.overlay.setResults(result, resultBundle.inputImageHeight, resultBundle.inputImageWidth, RunningMode.LIVE_STREAM)
                 }
             } else {
-                // Jeśli nie ma wyników (brak dłoni), wyczyść nakładkę
                 binding.overlay.clear()
             }
 
-            // Odśwież widok w obu przypadkach
             binding.overlay.invalidate()
         }
     }

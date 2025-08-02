@@ -27,6 +27,7 @@ dimen fab_margin
 dimen round_button_medium
 dimen stroke_small
 drawable background
+drawable dialog_background
 drawable ic_baseline_add_24
 drawable ic_baseline_photo_camera_24
 drawable ic_baseline_photo_library_24
@@ -53,6 +54,7 @@ id action_camera_to_menu
 id action_camera_to_permissions
 id action_menu_to_camera
 id action_permissions_to_camera
+id backToMenuButton
 id back_to_menu_button
 id backgroundImage
 id bot_move_image
@@ -63,8 +65,12 @@ id camera_fragment
 id detection_threshold_minus
 id detection_threshold_plus
 id detection_threshold_value
+id dialogContainer
+id dialogScore
+id dialogTitle
 id fabGetContent
 id fragment_container
+id gameResultOverlay
 id game_message_text
 id game_over_group
 id imageResult
@@ -76,6 +82,7 @@ id menu_fragment
 id nav_graph
 id overlay
 id permissions_fragment
+id playAgainButton
 id playCpuButton
 id playMultiplayerButton
 id play_again_button
@@ -94,11 +101,15 @@ id tvPlaceholder
 id tvScore
 id videoView
 id view_finder
+id your_gesture_container
+id your_gesture_label
+id your_gesture_value
 integer bottom_sheet_control_text_min_ems
 layout activity_main
 layout fragment_camera
 layout fragment_gallery
 layout fragment_menu
+layout game_result_dialog
 layout info_bottom_sheet
 layout item_gesture_recognizer_result
 menu menu_bottom_nav

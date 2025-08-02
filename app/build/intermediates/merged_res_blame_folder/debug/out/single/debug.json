@@ -12,12 +12,12 @@
         "source": "C:\\Users\\PC\\.gradle\\daemon\\8.9\\com.google.mediapipe.examples.gesturerecognizer.app-main-52:\\mipmap-mdpi\\ic_launcher_round.webp"
     },
     {
-        "merged": "C:\\Users\\PC\\.gradle\\daemon\\8.9\\com.google.mediapipe.examples.gesturerecognizer.app-merged_res-50:\\mipmap-hdpi_ic_launcher_foreground.webp.flat",
-        "source": "C:\\Users\\PC\\.gradle\\daemon\\8.9\\com.google.mediapipe.examples.gesturerecognizer.app-main-52:\\mipmap-hdpi\\ic_launcher_foreground.webp"
-    },
-    {
         "merged": "C:\\Users\\PC\\.gradle\\daemon\\8.9\\com.google.mediapipe.examples.gesturerecognizer.app-merged_res-50:\\mipmap-mdpi_ic_launcher_foreground.webp.flat",
         "source": "C:\\Users\\PC\\.gradle\\daemon\\8.9\\com.google.mediapipe.examples.gesturerecognizer.app-main-52:\\mipmap-mdpi\\ic_launcher_foreground.webp"
+    },
+    {
+        "merged": "C:\\Users\\PC\\.gradle\\daemon\\8.9\\com.google.mediapipe.examples.gesturerecognizer.app-merged_res-50:\\mipmap-hdpi_ic_launcher_foreground.webp.flat",
+        "source": "C:\\Users\\PC\\.gradle\\daemon\\8.9\\com.google.mediapipe.examples.gesturerecognizer.app-main-52:\\mipmap-hdpi\\ic_launcher_foreground.webp"
     },
     {
         "merged": "C:\\Users\\PC\\.gradle\\daemon\\8.9\\com.google.mediapipe.examples.gesturerecognizer.app-merged_res-50:\\drawable_ic_minus.xml.flat",
@@ -68,8 +68,16 @@
         "source": "C:\\Users\\PC\\.gradle\\daemon\\8.9\\com.google.mediapipe.examples.gesturerecognizer.app-main-52:\\drawable\\ic_baseline_photo_camera_24.xml"
     },
     {
+        "merged": "C:\\Users\\PC\\.gradle\\daemon\\8.9\\com.google.mediapipe.examples.gesturerecognizer.app-merged_res-50:\\drawable_dialog_background.xml.flat",
+        "source": "C:\\Users\\PC\\.gradle\\daemon\\8.9\\com.google.mediapipe.examples.gesturerecognizer.app-main-52:\\drawable\\dialog_background.xml"
+    },
+    {
         "merged": "C:\\Users\\PC\\.gradle\\daemon\\8.9\\com.google.mediapipe.examples.gesturerecognizer.app-merged_res-50:\\drawable_media_pipe_banner.xml.flat",
         "source": "C:\\Users\\PC\\.gradle\\daemon\\8.9\\com.google.mediapipe.examples.gesturerecognizer.app-main-52:\\drawable\\media_pipe_banner.xml"
+    },
+    {
+        "merged": "com.google.mediapipe.examples.gesturerecognizer.app-merged_res-50:/layout_fragment_camera.xml.flat",
+        "source": "com.google.mediapipe.examples.gesturerecognizer.app-main-52:/layout/fragment_camera.xml"
     },
     {
         "merged": "C:\\Users\\PC\\.gradle\\daemon\\8.9\\com.google.mediapipe.examples.gesturerecognizer.app-merged_res-50:\\drawable_logo.png.flat",
@@ -82,10 +90,6 @@
     {
         "merged": "C:\\Users\\PC\\.gradle\\daemon\\8.9\\com.google.mediapipe.examples.gesturerecognizer.app-merged_res-50:\\drawable_rockenemy.png.flat",
         "source": "C:\\Users\\PC\\.gradle\\daemon\\8.9\\com.google.mediapipe.examples.gesturerecognizer.app-main-52:\\drawable\\rockenemy.png"
-    },
-    {
-        "merged": "com.google.mediapipe.examples.gesturerecognizer.app-merged_res-50:/layout_fragment_menu.xml.flat",
-        "source": "com.google.mediapipe.examples.gesturerecognizer.app-main-52:/layout/fragment_menu.xml"
     },
     {
         "merged": "C:\\Users\\PC\\.gradle\\daemon\\8.9\\com.google.mediapipe.examples.gesturerecognizer.app-merged_res-50:\\drawable_ic_scissors.png.flat",
@@ -178,6 +182,10 @@
     {
         "merged": "C:\\Users\\PC\\.gradle\\daemon\\8.9\\com.google.mediapipe.examples.gesturerecognizer.app-merged_res-50:\\drawable_ic_plus.xml.flat",
         "source": "C:\\Users\\PC\\.gradle\\daemon\\8.9\\com.google.mediapipe.examples.gesturerecognizer.app-main-52:\\drawable\\ic_plus.xml"
+    },
+    {
+        "merged": "C:\\Users\\PC\\.gradle\\daemon\\8.9\\com.google.mediapipe.examples.gesturerecognizer.app-merged_res-50:\\layout_game_result_dialog.xml.flat",
+        "source": "C:\\Users\\PC\\.gradle\\daemon\\8.9\\com.google.mediapipe.examples.gesturerecognizer.app-main-52:\\layout\\game_result_dialog.xml"
     },
     {
         "merged": "C:\\Users\\PC\\.gradle\\daemon\\8.9\\com.google.mediapipe.examples.gesturerecognizer.app-merged_res-50:\\drawable_icn_chevron_up.png.flat",

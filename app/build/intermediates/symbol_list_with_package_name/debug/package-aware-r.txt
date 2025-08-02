@@ -2641,6 +2641,7 @@ drawable design_ic_visibility
 drawable design_ic_visibility_off
 drawable design_password_eye
 drawable design_snackbar_background
+drawable dialog_background
 drawable ic_baseline_add_24
 drawable ic_baseline_photo_camera_24
 drawable ic_baseline_photo_library_24
@@ -2837,6 +2838,7 @@ id auto
 id autoComplete
 id autoCompleteToEnd
 id autoCompleteToStart
+id backToMenuButton
 id back_to_menu_button
 id backgroundImage
 id barrier
@@ -2910,6 +2912,9 @@ id design_navigation_view
 id detection_threshold_minus
 id detection_threshold_plus
 id detection_threshold_value
+id dialogContainer
+id dialogScore
+id dialogTitle
 id dialog_button
 id dimensions
 id direct
@@ -2963,6 +2968,7 @@ id fragment_container
 id fragment_container_view_tag
 id frost
 id fullscreen_header
+id gameResultOverlay
 id game_message_text
 id game_over_group
 id ghost_view
@@ -3113,6 +3119,7 @@ id percent
 id performance
 id permissions_fragment
 id pin
+id playAgainButton
 id playCpuButton
 id playMultiplayerButton
 id play_again_button
@@ -3280,6 +3287,9 @@ id wrap_content
 id wrap_content_constrained
 id x_left
 id x_right
+id your_gesture_container
+id your_gesture_label
+id your_gesture_value
 integer abc_config_activityDefaultDur
 integer abc_config_activityShortDur
 integer app_bar_elevation_anim_duration
@@ -3425,6 +3435,7 @@ layout design_text_input_start_icon
 layout fragment_camera
 layout fragment_gallery
 layout fragment_menu
+layout game_result_dialog
 layout info_bottom_sheet
 layout item_gesture_recognizer_result
 layout m3_alert_dialog

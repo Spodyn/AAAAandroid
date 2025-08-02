@@ -31,7 +31,7 @@
             android:textStyle="bold"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toTopOf="parent"
-            tools:text="Ty: 0" />
+            tools:text="You: 0" />
 
         <TextView
             android:id="@+id/bot_score_text"
@@ -51,7 +51,9 @@
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintTop_toBottomOf="@id/bot_score_text"
             android:layout_marginTop="16dp"
-            tools:src="@drawable/ic_rock" /> <TextView
+            tools:src="@drawable/ic_rock" />
+
+        <TextView
             android:id="@+id/game_message_text"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
@@ -66,6 +68,37 @@
             app:layout_constraintTop_toTopOf="parent"
             tools:text="3" />
 
+        <LinearLayout
+            android:id="@+id/your_gesture_container"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:gravity="center_horizontal"
+            android:visibility="gone"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            android:layout_marginBottom="100dp">
+
+            <TextView
+                android:id="@+id/your_gesture_label"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Your gesture:"
+                android:textColor="@android:color/white"
+                android:textSize="18sp" />
+
+            <TextView
+                android:id="@+id/your_gesture_value"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="None"
+                android:textColor="@android:color/white"
+                android:textSize="24sp"
+                android:textStyle="bold"
+                android:visibility="gone" />
+        </LinearLayout>
+
         <androidx.constraintlayout.widget.Group
             android:id="@+id/game_over_group"
             android:layout_width="wrap_content"
@@ -78,21 +111,21 @@
             android:id="@+id/play_again_button"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="Zagraj jeszcze raz"
+            android:text="Play Again"
             app:layout_constraintBottom_toTopOf="@id/back_to_menu_button"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
-            android:layout_marginBottom="8dp"/>
+            android:layout_marginBottom="8dp" />
 
         <Button
             android:id="@+id/back_to_menu_button"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="Wróć do menu"
+            android:text="Back to Menu"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
-            android:layout_marginBottom="32dp"/>
+            android:layout_marginBottom="32dp" />
 
     </androidx.constraintlayout.widget.ConstraintLayout>
 
@@ -108,5 +141,10 @@
         android:visibility="gone"
         app:layout_anchor="@id/bottom_sheet_layout"
         app:layout_anchorGravity="top" />
+
+    <include
+        android:id="@+id/gameResultOverlay"
+        layout="@layout/game_result_dialog"
+        android:visibility="gone" />
 
 </androidx.coordinatorlayout.widget.CoordinatorLayout>

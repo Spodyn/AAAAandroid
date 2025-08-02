@@ -4,28 +4,26 @@ import androidx.lifecycle.LiveData
 import androidx.lifecycle.MutableLiveData
 import androidx.lifecycle.ViewModel
 
-// Definiuje możliwe ruchy w grze
 enum class Move {
     ROCK, PAPER, SCISSORS, NONE
 }
 
-// Definiuje możliwe stany gry
 enum class GameState {
     STARTING, COUNTDOWN, AWAITING_RESULT, SHOW_RESULT, GAME_OVER
 }
 
 class MainViewModel : ViewModel() {
-    // Stare zmienne do konfiguracji MediaPipe
+
     private var _delegate: Int = GestureRecognizerHelper.DELEGATE_CPU
     private var _minHandDetectionConfidence: Float = GestureRecognizerHelper.DEFAULT_HAND_DETECTION_CONFIDENCE
     private var _minHandTrackingConfidence: Float = GestureRecognizerHelper.DEFAULT_HAND_TRACKING_CONFIDENCE
     private var _minHandPresenceConfidence: Float = GestureRecognizerHelper.DEFAULT_HAND_PRESENCE_CONFIDENCE
+
     val currentDelegate: Int get() = _delegate
     val currentMinHandDetectionConfidence: Float get() = _minHandDetectionConfidence
     val currentMinHandTrackingConfidence: Float get() = _minHandTrackingConfidence
     val currentMinHandPresenceConfidence: Float get() = _minHandPresenceConfidence
 
-    // Nowe zmienne LiveData do zarządzania stanem gry
     private val _playerScore = MutableLiveData(0)
     val playerScore: LiveData<Int> = _playerScore
 
@@ -46,7 +44,6 @@ class MainViewModel : ViewModel() {
 
     val maxScore = 3
 
-    // Funkcje do zmiany stanu gry
     fun setGameState(newState: GameState) {
         _gameState.value = newState
     }
@@ -69,31 +66,32 @@ class MainViewModel : ViewModel() {
 
         if (pMove == Move.NONE) {
             _botScore.value = (_botScore.value ?: 0) + 1
-            setGameMessage("Nie pokazano gestu! Punkt dla bota.")
+            setGameMessage("No gesture")
             return
         }
 
         if (pMove == bMove) {
-            setGameMessage("Remis!")
+            setGameMessage("Draw")
         } else if ((pMove == Move.ROCK && bMove == Move.SCISSORS) ||
             (pMove == Move.PAPER && bMove == Move.ROCK) ||
             (pMove == Move.SCISSORS && bMove == Move.PAPER)
         ) {
             _playerScore.value = (_playerScore.value ?: 0) + 1
-            setGameMessage("Wygrałeś rundę!")
+            setGameMessage("You win")
         } else {
             _botScore.value = (_botScore.value ?: 0) + 1
-            setGameMessage("Bot wygrał rundę.")
+            setGameMessage("Bot wins")
         }
 
-        if(_playerScore.value == maxScore) {
-            setGameMessage("WYGRANA!")
+        if (_playerScore.value == maxScore) {
+            setGameMessage("Victory!")
             setGameState(GameState.GAME_OVER)
         } else if (_botScore.value == maxScore) {
-            setGameMessage("PORAŻKA!")
+            setGameMessage("Defeat!")
             setGameState(GameState.GAME_OVER)
         }
     }
+
 
     fun resetGame() {
         _playerScore.value = 0
@@ -101,22 +99,5 @@ class MainViewModel : ViewModel() {
         _playerMove.value = Move.NONE
         _botMove.value = Move.NONE
         setGameState(GameState.STARTING)
-    }
-
-    // Stare funkcje
-    fun setDelegate(delegate: Int) {
-        _delegate = delegate
-    }
-
-    fun setMinHandDetectionConfidence(confidence: Float) {
-        _minHandDetectionConfidence = confidence
-    }
-
-    fun setMinHandTrackingConfidence(confidence: Float) {
-        _minHandTrackingConfidence = confidence
-    }
-
-    fun setMinHandPresenceConfidence(confidence: Float) {
-        _minHandPresenceConfidence = confidence
     }
 }

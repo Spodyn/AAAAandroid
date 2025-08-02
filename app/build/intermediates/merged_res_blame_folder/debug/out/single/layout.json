@@ -1,5 +1,9 @@
 [
     {
+        "merged": "com.google.mediapipe.examples.gesturerecognizer.app-mergeDebugResources-49:/layout/fragment_camera.xml",
+        "source": "com.google.mediapipe.examples.gesturerecognizer.app-main-52:/layout/fragment_camera.xml"
+    },
+    {
         "merged": "C:\\Users\\PC\\.gradle\\daemon\\8.9\\com.google.mediapipe.examples.gesturerecognizer.app-mergeDebugResources-49:\\layout\\info_bottom_sheet.xml",
         "source": "C:\\Users\\PC\\.gradle\\daemon\\8.9\\com.google.mediapipe.examples.gesturerecognizer.app-main-52:\\layout\\info_bottom_sheet.xml"
     },
@@ -12,12 +16,12 @@
         "source": "C:\\Users\\PC\\.gradle\\daemon\\8.9\\com.google.mediapipe.examples.gesturerecognizer.app-main-52:\\layout\\activity_main.xml"
     },
     {
-        "merged": "com.google.mediapipe.examples.gesturerecognizer.app-mergeDebugResources-49:/layout/fragment_menu.xml",
-        "source": "com.google.mediapipe.examples.gesturerecognizer.app-main-52:/layout/fragment_menu.xml"
-    },
-    {
         "merged": "C:\\Users\\PC\\.gradle\\daemon\\8.9\\com.google.mediapipe.examples.gesturerecognizer.app-mergeDebugResources-49:\\layout\\fragment_camera.xml",
         "source": "C:\\Users\\PC\\.gradle\\daemon\\8.9\\com.google.mediapipe.examples.gesturerecognizer.app-main-52:\\layout\\fragment_camera.xml"
+    },
+    {
+        "merged": "C:\\Users\\PC\\.gradle\\daemon\\8.9\\com.google.mediapipe.examples.gesturerecognizer.app-mergeDebugResources-49:\\layout\\game_result_dialog.xml",
+        "source": "C:\\Users\\PC\\.gradle\\daemon\\8.9\\com.google.mediapipe.examples.gesturerecognizer.app-main-52:\\layout\\game_result_dialog.xml"
     },
     {
         "merged": "C:\\Users\\PC\\.gradle\\daemon\\8.9\\com.google.mediapipe.examples.gesturerecognizer.app-mergeDebugResources-49:\\layout\\fragment_gallery.xml",

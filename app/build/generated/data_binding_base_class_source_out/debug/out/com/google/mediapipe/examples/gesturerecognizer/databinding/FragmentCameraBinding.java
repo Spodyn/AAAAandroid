@@ -6,6 +6,7 @@ import android.view.View;
 import android.view.ViewGroup;
 import android.widget.Button;
 import android.widget.ImageView;
+import android.widget.LinearLayout;
 import android.widget.TextView;
 import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
@@ -47,6 +48,9 @@ public final class FragmentCameraBinding implements ViewBinding {
   public final Group gameOverGroup;
 
   @NonNull
+  public final GameResultDialogBinding gameResultOverlay;
+
+  @NonNull
   public final OverlayView overlay;
 
   @NonNull
@@ -61,13 +65,24 @@ public final class FragmentCameraBinding implements ViewBinding {
   @NonNull
   public final PreviewView viewFinder;
 
+  @NonNull
+  public final LinearLayout yourGestureContainer;
+
+  @NonNull
+  public final TextView yourGestureLabel;
+
+  @NonNull
+  public final TextView yourGestureValue;
+
   private FragmentCameraBinding(@NonNull CoordinatorLayout rootView,
       @NonNull Button backToMenuButton, @NonNull ImageView botMoveImage,
       @NonNull TextView botScoreText, @NonNull InfoBottomSheetBinding bottomSheetLayout,
       @NonNull CoordinatorLayout cameraContainer, @NonNull TextView gameMessageText,
-      @NonNull Group gameOverGroup, @NonNull OverlayView overlay, @NonNull Button playAgainButton,
+      @NonNull Group gameOverGroup, @NonNull GameResultDialogBinding gameResultOverlay,
+      @NonNull OverlayView overlay, @NonNull Button playAgainButton,
       @NonNull TextView playerScoreText, @NonNull RecyclerView recyclerviewResults,
-      @NonNull PreviewView viewFinder) {
+      @NonNull PreviewView viewFinder, @NonNull LinearLayout yourGestureContainer,
+      @NonNull TextView yourGestureLabel, @NonNull TextView yourGestureValue) {
     this.rootView = rootView;
     this.backToMenuButton = backToMenuButton;
     this.botMoveImage = botMoveImage;
@@ -76,11 +91,15 @@ public final class FragmentCameraBinding implements ViewBinding {
     this.cameraContainer = cameraContainer;
     this.gameMessageText = gameMessageText;
     this.gameOverGroup = gameOverGroup;
+    this.gameResultOverlay = gameResultOverlay;
     this.overlay = overlay;
     this.playAgainButton = playAgainButton;
     this.playerScoreText = playerScoreText;
     this.recyclerviewResults = recyclerviewResults;
     this.viewFinder = viewFinder;
+    this.yourGestureContainer = yourGestureContainer;
+    this.yourGestureLabel = yourGestureLabel;
+    this.yourGestureValue = yourGestureValue;
   }
 
   @Override
@@ -149,6 +168,13 @@ public final class FragmentCameraBinding implements ViewBinding {
         break missingId;
       }
 
+      id = R.id.gameResultOverlay;
+      View gameResultOverlay = ViewBindings.findChildViewById(rootView, id);
+      if (gameResultOverlay == null) {
+        break missingId;
+      }
+      GameResultDialogBinding binding_gameResultOverlay = GameResultDialogBinding.bind(gameResultOverlay);
+
       id = R.id.overlay;
       OverlayView overlay = ViewBindings.findChildViewById(rootView, id);
       if (overlay == null) {
@@ -179,9 +205,28 @@ public final class FragmentCameraBinding implements ViewBinding {
         break missingId;
       }
 
+      id = R.id.your_gesture_container;
+      LinearLayout yourGestureContainer = ViewBindings.findChildViewById(rootView, id);
+      if (yourGestureContainer == null) {
+        break missingId;
+      }
+
+      id = R.id.your_gesture_label;
+      TextView yourGestureLabel = ViewBindings.findChildViewById(rootView, id);
+      if (yourGestureLabel == null) {
+        break missingId;
+      }
+
+      id = R.id.your_gesture_value;
+      TextView yourGestureValue = ViewBindings.findChildViewById(rootView, id);
+      if (yourGestureValue == null) {
+        break missingId;
+      }
+
       return new FragmentCameraBinding((CoordinatorLayout) rootView, backToMenuButton, botMoveImage,
           botScoreText, binding_bottomSheetLayout, cameraContainer, gameMessageText, gameOverGroup,
-          overlay, playAgainButton, playerScoreText, recyclerviewResults, viewFinder);
+          binding_gameResultOverlay, overlay, playAgainButton, playerScoreText, recyclerviewResults,
+          viewFinder, yourGestureContainer, yourGestureLabel, yourGestureValue);
     }
     String missingId = rootView.getResources().getResourceName(id);
     throw new NullPointerException("Missing required view with ID: ".concat(missingId));
