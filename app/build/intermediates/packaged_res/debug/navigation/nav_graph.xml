@@ -33,11 +33,12 @@
     <fragment
         android:id="@+id/permissions_fragment"
         android:name="com.google.mediapipe.examples.gesturerecognizer.fragment.PermissionsFragment"
-        android:label="PermissionsFragment" >
+        android:label="fragment_permissions"
+        tools:layout="@layout/fragment_permissions" >
         <action
             android:id="@+id/action_permissions_to_camera"
             app:destination="@id/camera_fragment"
-            app:popUpTo="@id/menu_fragment"
-            app:popUpToInclusive="false"/>
+            app:popUpTo="@id/menu_fragment" />
     </fragment>
+
 </navigation>

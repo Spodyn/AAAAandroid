@@ -4,7 +4,8 @@ package com.google.mediapipe.examples.gesturerecognizer.databinding;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
-import android.widget.Button;
+import android.widget.ImageButton;
+import android.widget.ImageView;
 import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
 import androidx.constraintlayout.widget.ConstraintLayout;
@@ -20,11 +21,30 @@ public final class FragmentMenuBinding implements ViewBinding {
   private final ConstraintLayout rootView;
 
   @NonNull
-  public final Button playButton;
+  public final ImageView backgroundImage;
 
-  private FragmentMenuBinding(@NonNull ConstraintLayout rootView, @NonNull Button playButton) {
+  @NonNull
+  public final ImageView logoImage;
+
+  @NonNull
+  public final ImageView menuImage;
+
+  @NonNull
+  public final ImageButton playCpuButton;
+
+  @NonNull
+  public final ImageButton playMultiplayerButton;
+
+  private FragmentMenuBinding(@NonNull ConstraintLayout rootView,
+      @NonNull ImageView backgroundImage, @NonNull ImageView logoImage,
+      @NonNull ImageView menuImage, @NonNull ImageButton playCpuButton,
+      @NonNull ImageButton playMultiplayerButton) {
     this.rootView = rootView;
-    this.playButton = playButton;
+    this.backgroundImage = backgroundImage;
+    this.logoImage = logoImage;
+    this.menuImage = menuImage;
+    this.playCpuButton = playCpuButton;
+    this.playMultiplayerButton = playMultiplayerButton;
   }
 
   @Override
@@ -54,13 +74,38 @@ public final class FragmentMenuBinding implements ViewBinding {
     // This is done to optimize the compiled bytecode for size and performance.
     int id;
     missingId: {
-      id = R.id.play_button;
-      Button playButton = ViewBindings.findChildViewById(rootView, id);
-      if (playButton == null) {
+      id = R.id.backgroundImage;
+      ImageView backgroundImage = ViewBindings.findChildViewById(rootView, id);
+      if (backgroundImage == null) {
         break missingId;
       }
 
-      return new FragmentMenuBinding((ConstraintLayout) rootView, playButton);
+      id = R.id.logoImage;
+      ImageView logoImage = ViewBindings.findChildViewById(rootView, id);
+      if (logoImage == null) {
+        break missingId;
+      }
+
+      id = R.id.menuImage;
+      ImageView menuImage = ViewBindings.findChildViewById(rootView, id);
+      if (menuImage == null) {
+        break missingId;
+      }
+
+      id = R.id.playCpuButton;
+      ImageButton playCpuButton = ViewBindings.findChildViewById(rootView, id);
+      if (playCpuButton == null) {
+        break missingId;
+      }
+
+      id = R.id.playMultiplayerButton;
+      ImageButton playMultiplayerButton = ViewBindings.findChildViewById(rootView, id);
+      if (playMultiplayerButton == null) {
+        break missingId;
+      }
+
+      return new FragmentMenuBinding((ConstraintLayout) rootView, backgroundImage, logoImage,
+          menuImage, playCpuButton, playMultiplayerButton);
     }
     String missingId = rootView.getResources().getResourceName(id);
     throw new NullPointerException("Missing required view with ID: ".concat(missingId));

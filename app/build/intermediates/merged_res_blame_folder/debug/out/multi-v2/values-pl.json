@@ -1,7 +1,7 @@
 {
     "logs": [
         {
-            "outputFile": "com.google.mediapipe.examples.gesturerecognizer.app-mergeDebugResources-47:/values-pl/values-pl.xml",
+            "outputFile": "com.google.mediapipe.examples.gesturerecognizer.app-mergeDebugResources-48:/values-pl/values-pl.xml",
             "map": [
                 {
                     "source": "C:\\Users\\PC\\.gradle\\caches\\8.9\\transforms\\51b2e5b04b15f4d724e16de360b0876f\\transformed\\material-1.7.0\\res\\values-pl\\values-pl.xml",

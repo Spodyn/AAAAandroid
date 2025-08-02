@@ -1,9 +1,9 @@
 -- Merging decision tree log ---
 manifest
-ADDED from C:\Users\PC\Desktop\AAAAandroid\app\src\main\AndroidManifest.xml:17:1-56:12
-INJECTED from C:\Users\PC\Desktop\AAAAandroid\app\src\main\AndroidManifest.xml:17:1-56:12
-INJECTED from C:\Users\PC\Desktop\AAAAandroid\app\src\main\AndroidManifest.xml:17:1-56:12
-INJECTED from C:\Users\PC\Desktop\AAAAandroid\app\src\main\AndroidManifest.xml:17:1-56:12
+ADDED from C:\Users\PC\Desktop\AAAcopy\AAAAandroid\app\src\main\AndroidManifest.xml:17:1-56:12
+INJECTED from C:\Users\PC\Desktop\AAAcopy\AAAAandroid\app\src\main\AndroidManifest.xml:17:1-56:12
+INJECTED from C:\Users\PC\Desktop\AAAcopy\AAAAandroid\app\src\main\AndroidManifest.xml:17:1-56:12
+INJECTED from C:\Users\PC\Desktop\AAAcopy\AAAAandroid\app\src\main\AndroidManifest.xml:17:1-56:12
 MERGED from [androidx.databinding:viewbinding:7.3.0] C:\Users\PC\.gradle\caches\8.9\transforms\99657bac000fbb93f6108644f8b77975\transformed\viewbinding-7.3.0\AndroidManifest.xml:2:1-9:12
 MERGED from [androidx.navigation:navigation-fragment-ktx:2.5.3] C:\Users\PC\.gradle\caches\8.9\transforms\0d716d3d1861c1ccc9d01b4f0f7f0882\transformed\navigation-fragment-ktx-2.5.3\AndroidManifest.xml:17:1-24:12
 MERGED from [androidx.navigation:navigation-fragment:2.5.3] C:\Users\PC\.gradle\caches\8.9\transforms\86f8920c724b6a45f633b246762589cd\transformed\navigation-fragment-2.5.3\AndroidManifest.xml:17:1-24:12
@@ -37,6 +37,7 @@ MERGED from [androidx.camera:camera-camera2:1.2.0-alpha02] C:\Users\PC\.gradle\c
 MERGED from [androidx.camera:camera-lifecycle:1.2.0-alpha02] C:\Users\PC\.gradle\caches\8.9\transforms\b0e29b9d1dcd02de4cddd2ad410eea01\transformed\camera-lifecycle-1.2.0-alpha02\AndroidManifest.xml:17:1-23:12
 MERGED from [androidx.camera:camera-core:1.2.0-alpha02] C:\Users\PC\.gradle\caches\8.9\transforms\d8208c465dae65289abbebdc5d2c034d\transformed\camera-core-1.2.0-alpha02\AndroidManifest.xml:17:1-37:12
 MERGED from [com.google.mediapipe:tasks-vision:0.10.26] C:\Users\PC\.gradle\caches\8.9\transforms\fd876cb4a2c779203c86fb783a58ac0f\transformed\tasks-vision-0.10.26\AndroidManifest.xml:2:1-9:12
+MERGED from [androidx.core:core-splashscreen:1.0.1] C:\Users\PC\.gradle\caches\8.9\transforms\5e110569fedec3150c23dbba28de4ee1\transformed\core-splashscreen-1.0.1\AndroidManifest.xml:17:1-24:12
 MERGED from [androidx.emoji2:emoji2-views-helper:1.2.0] C:\Users\PC\.gradle\caches\8.9\transforms\cedde7d3621e4639d2a80a224882488b\transformed\emoji2-views-helper-1.2.0\AndroidManifest.xml:2:1-7:12
 MERGED from [androidx.emoji2:emoji2:1.2.0] C:\Users\PC\.gradle\caches\8.9\transforms\73440663b556764e1bd9bd094ae27724\transformed\emoji2-1.2.0\AndroidManifest.xml:17:1-35:12
 MERGED from [androidx.drawerlayout:drawerlayout:1.1.1] C:\Users\PC\.gradle\caches\8.9\transforms\84bc877f272a3946fea6bfa30f491bed\transformed\drawerlayout-1.1.1\AndroidManifest.xml:17:1-24:12
@@ -72,41 +73,41 @@ MERGED from [androidx.localbroadcastmanager:localbroadcastmanager:1.0.0] C:\User
 MERGED from [androidx.print:print:1.0.0] C:\Users\PC\.gradle\caches\8.9\transforms\80a82e3f1a754093864b0ae4dda4b75f\transformed\print-1.0.0\AndroidManifest.xml:17:1-22:12
 MERGED from [com.google.firebase:firebase-encoders-json:18.0.0] C:\Users\PC\.gradle\caches\8.9\transforms\9f5f8f66901d606c6b7b792d62c762ff\transformed\firebase-encoders-json-18.0.0\AndroidManifest.xml:15:1-23:12
 MERGED from [androidx.annotation:annotation-experimental:1.1.0] C:\Users\PC\.gradle\caches\8.9\transforms\24c70d20b1ef3702d898fdb683d720cb\transformed\annotation-experimental-1.1.0\AndroidManifest.xml:17:1-24:12
-INJECTED from C:\Users\PC\Desktop\AAAAandroid\app\src\main\AndroidManifest.xml:17:1-56:12
-INJECTED from C:\Users\PC\Desktop\AAAAandroid\app\src\main\AndroidManifest.xml:17:1-56:12
-INJECTED from C:\Users\PC\Desktop\AAAAandroid\app\src\main\AndroidManifest.xml:17:1-56:12
+INJECTED from C:\Users\PC\Desktop\AAAcopy\AAAAandroid\app\src\main\AndroidManifest.xml:17:1-56:12
+INJECTED from C:\Users\PC\Desktop\AAAcopy\AAAAandroid\app\src\main\AndroidManifest.xml:17:1-56:12
+INJECTED from C:\Users\PC\Desktop\AAAcopy\AAAAandroid\app\src\main\AndroidManifest.xml:17:1-56:12
 	package
-		INJECTED from C:\Users\PC\Desktop\AAAAandroid\app\src\main\AndroidManifest.xml
-		ADDED from C:\Users\PC\Desktop\AAAAandroid\app\src\main\AndroidManifest.xml:17:1-56:12
-		INJECTED from C:\Users\PC\Desktop\AAAAandroid\app\src\main\AndroidManifest.xml
+		INJECTED from C:\Users\PC\Desktop\AAAcopy\AAAAandroid\app\src\main\AndroidManifest.xml
+		ADDED from C:\Users\PC\Desktop\AAAcopy\AAAAandroid\app\src\main\AndroidManifest.xml:17:1-56:12
+		INJECTED from C:\Users\PC\Desktop\AAAcopy\AAAAandroid\app\src\main\AndroidManifest.xml
 	android:versionName
-		INJECTED from C:\Users\PC\Desktop\AAAAandroid\app\src\main\AndroidManifest.xml
-		ADDED from C:\Users\PC\Desktop\AAAAandroid\app\src\main\AndroidManifest.xml:17:1-56:12
-		INJECTED from C:\Users\PC\Desktop\AAAAandroid\app\src\main\AndroidManifest.xml
+		INJECTED from C:\Users\PC\Desktop\AAAcopy\AAAAandroid\app\src\main\AndroidManifest.xml
+		ADDED from C:\Users\PC\Desktop\AAAcopy\AAAAandroid\app\src\main\AndroidManifest.xml:17:1-56:12
+		INJECTED from C:\Users\PC\Desktop\AAAcopy\AAAAandroid\app\src\main\AndroidManifest.xml
 	xmlns:tools
-		ADDED from C:\Users\PC\Desktop\AAAAandroid\app\src\main\AndroidManifest.xml:19:5-51
+		ADDED from C:\Users\PC\Desktop\AAAcopy\AAAAandroid\app\src\main\AndroidManifest.xml:19:5-51
 	xmlns:dist
-		ADDED from C:\Users\PC\Desktop\AAAAandroid\app\src\main\AndroidManifest.xml:18:5-61
+		ADDED from C:\Users\PC\Desktop\AAAcopy\AAAAandroid\app\src\main\AndroidManifest.xml:18:5-61
 	android:versionCode
-		INJECTED from C:\Users\PC\Desktop\AAAAandroid\app\src\main\AndroidManifest.xml
-		ADDED from C:\Users\PC\Desktop\AAAAandroid\app\src\main\AndroidManifest.xml:17:1-56:12
-		INJECTED from C:\Users\PC\Desktop\AAAAandroid\app\src\main\AndroidManifest.xml
+		INJECTED from C:\Users\PC\Desktop\AAAcopy\AAAAandroid\app\src\main\AndroidManifest.xml
+		ADDED from C:\Users\PC\Desktop\AAAcopy\AAAAandroid\app\src\main\AndroidManifest.xml:17:1-56:12
+		INJECTED from C:\Users\PC\Desktop\AAAcopy\AAAAandroid\app\src\main\AndroidManifest.xml
 	xmlns:android
-		ADDED from C:\Users\PC\Desktop\AAAAandroid\app\src\main\AndroidManifest.xml:17:11-69
+		ADDED from C:\Users\PC\Desktop\AAAcopy\AAAAandroid\app\src\main\AndroidManifest.xml:17:11-69
 dist:module
-ADDED from C:\Users\PC\Desktop\AAAAandroid\app\src\main\AndroidManifest.xml:22:5-40
+ADDED from C:\Users\PC\Desktop\AAAcopy\AAAAandroid\app\src\main\AndroidManifest.xml:22:5-40
 	dist:instant
-		ADDED from C:\Users\PC\Desktop\AAAAandroid\app\src\main\AndroidManifest.xml:22:18-37
+		ADDED from C:\Users\PC\Desktop\AAAcopy\AAAAandroid\app\src\main\AndroidManifest.xml:22:18-37
 uses-feature#android.hardware.camera
-ADDED from C:\Users\PC\Desktop\AAAAandroid\app\src\main\AndroidManifest.xml:25:5-60
+ADDED from C:\Users\PC\Desktop\AAAcopy\AAAAandroid\app\src\main\AndroidManifest.xml:25:5-60
 	android:name
-		ADDED from C:\Users\PC\Desktop\AAAAandroid\app\src\main\AndroidManifest.xml:25:19-57
+		ADDED from C:\Users\PC\Desktop\AAAcopy\AAAAandroid\app\src\main\AndroidManifest.xml:25:19-57
 uses-permission#android.permission.CAMERA
-ADDED from C:\Users\PC\Desktop\AAAAandroid\app\src\main\AndroidManifest.xml:28:5-65
+ADDED from C:\Users\PC\Desktop\AAAcopy\AAAAandroid\app\src\main\AndroidManifest.xml:28:5-65
 	android:name
-		ADDED from C:\Users\PC\Desktop\AAAAandroid\app\src\main\AndroidManifest.xml:28:22-62
+		ADDED from C:\Users\PC\Desktop\AAAcopy\AAAAandroid\app\src\main\AndroidManifest.xml:28:22-62
 application
-ADDED from C:\Users\PC\Desktop\AAAAandroid\app\src\main\AndroidManifest.xml:30:5-54:19
+ADDED from C:\Users\PC\Desktop\AAAcopy\AAAAandroid\app\src\main\AndroidManifest.xml:30:5-54:19
 MERGED from [androidx.window:window:1.1.0-alpha03] C:\Users\PC\.gradle\caches\8.9\transforms\0741d81f48b5dbcac4f2b73652e06d3f\transformed\window-1.1.0-alpha03\AndroidManifest.xml:22:5-29:19
 MERGED from [androidx.window:window:1.1.0-alpha03] C:\Users\PC\.gradle\caches\8.9\transforms\0741d81f48b5dbcac4f2b73652e06d3f\transformed\window-1.1.0-alpha03\AndroidManifest.xml:22:5-29:19
 MERGED from [com.google.android.material:material:1.7.0] C:\Users\PC\.gradle\caches\8.9\transforms\51b2e5b04b15f4d724e16de360b0876f\transformed\material-1.7.0\AndroidManifest.xml:24:5-20
@@ -134,47 +135,47 @@ MERGED from [com.google.android.datatransport:transport-runtime:3.1.0] C:\Users\
 	android:appComponentFactory
 		ADDED from [androidx.core:core:1.8.0] C:\Users\PC\.gradle\caches\8.9\transforms\9439ebeccd8bacccc5e10d0bc580c5d0\transformed\core-1.8.0\AndroidManifest.xml:24:18-86
 	android:supportsRtl
-		ADDED from C:\Users\PC\Desktop\AAAAandroid\app\src\main\AndroidManifest.xml:35:9-35
+		ADDED from C:\Users\PC\Desktop\AAAcopy\AAAAandroid\app\src\main\AndroidManifest.xml:35:9-35
 	android:label
-		ADDED from C:\Users\PC\Desktop\AAAAandroid\app\src\main\AndroidManifest.xml:33:9-41
+		ADDED from C:\Users\PC\Desktop\AAAcopy\AAAAandroid\app\src\main\AndroidManifest.xml:33:9-41
 	tools:ignore
-		ADDED from C:\Users\PC\Desktop\AAAAandroid\app\src\main\AndroidManifest.xml:38:9-35
+		ADDED from C:\Users\PC\Desktop\AAAcopy\AAAAandroid\app\src\main\AndroidManifest.xml:38:9-35
 	android:roundIcon
-		ADDED from C:\Users\PC\Desktop\AAAAandroid\app\src\main\AndroidManifest.xml:34:9-54
+		ADDED from C:\Users\PC\Desktop\AAAcopy\AAAAandroid\app\src\main\AndroidManifest.xml:34:9-54
 	android:icon
-		ADDED from C:\Users\PC\Desktop\AAAAandroid\app\src\main\AndroidManifest.xml:32:9-43
+		ADDED from C:\Users\PC\Desktop\AAAcopy\AAAAandroid\app\src\main\AndroidManifest.xml:32:9-43
 	android:allowBackup
-		ADDED from C:\Users\PC\Desktop\AAAAandroid\app\src\main\AndroidManifest.xml:31:9-35
+		ADDED from C:\Users\PC\Desktop\AAAcopy\AAAAandroid\app\src\main\AndroidManifest.xml:31:9-35
 	android:theme
-		ADDED from C:\Users\PC\Desktop\AAAAandroid\app\src\main\AndroidManifest.xml:37:9-55
+		ADDED from C:\Users\PC\Desktop\AAAcopy\AAAAandroid\app\src\main\AndroidManifest.xml:37:9-50
 	android:taskAffinity
-		ADDED from C:\Users\PC\Desktop\AAAAandroid\app\src\main\AndroidManifest.xml:36:9-32
+		ADDED from C:\Users\PC\Desktop\AAAcopy\AAAAandroid\app\src\main\AndroidManifest.xml:36:9-32
 activity#com.google.mediapipe.examples.gesturerecognizer.MainActivity
-ADDED from C:\Users\PC\Desktop\AAAAandroid\app\src\main\AndroidManifest.xml:40:9-53:20
+ADDED from C:\Users\PC\Desktop\AAAcopy\AAAAandroid\app\src\main\AndroidManifest.xml:40:9-53:20
 	android:exported
-		ADDED from C:\Users\PC\Desktop\AAAAandroid\app\src\main\AndroidManifest.xml:42:13-36
+		ADDED from C:\Users\PC\Desktop\AAAcopy\AAAAandroid\app\src\main\AndroidManifest.xml:42:13-36
 	android:name
-		ADDED from C:\Users\PC\Desktop\AAAAandroid\app\src\main\AndroidManifest.xml:41:13-41
+		ADDED from C:\Users\PC\Desktop\AAAcopy\AAAAandroid\app\src\main\AndroidManifest.xml:41:13-41
 intent-filter#action:name:android.intent.action.MAIN+category:name:android.intent.category.LAUNCHER
-ADDED from C:\Users\PC\Desktop\AAAAandroid\app\src\main\AndroidManifest.xml:43:13-47:29
+ADDED from C:\Users\PC\Desktop\AAAcopy\AAAAandroid\app\src\main\AndroidManifest.xml:43:13-47:29
 action#android.intent.action.MAIN
-ADDED from C:\Users\PC\Desktop\AAAAandroid\app\src\main\AndroidManifest.xml:44:17-69
+ADDED from C:\Users\PC\Desktop\AAAcopy\AAAAandroid\app\src\main\AndroidManifest.xml:44:17-69
 	android:name
-		ADDED from C:\Users\PC\Desktop\AAAAandroid\app\src\main\AndroidManifest.xml:44:25-66
+		ADDED from C:\Users\PC\Desktop\AAAcopy\AAAAandroid\app\src\main\AndroidManifest.xml:44:25-66
 category#android.intent.category.LAUNCHER
-ADDED from C:\Users\PC\Desktop\AAAAandroid\app\src\main\AndroidManifest.xml:46:17-77
+ADDED from C:\Users\PC\Desktop\AAAcopy\AAAAandroid\app\src\main\AndroidManifest.xml:46:17-77
 	android:name
-		ADDED from C:\Users\PC\Desktop\AAAAandroid\app\src\main\AndroidManifest.xml:46:27-74
+		ADDED from C:\Users\PC\Desktop\AAAcopy\AAAAandroid\app\src\main\AndroidManifest.xml:46:27-74
 meta-data#android.notch_support
-ADDED from C:\Users\PC\Desktop\AAAAandroid\app\src\main\AndroidManifest.xml:50:13-52:40
+ADDED from C:\Users\PC\Desktop\AAAcopy\AAAAandroid\app\src\main\AndroidManifest.xml:50:13-52:40
 	android:value
-		ADDED from C:\Users\PC\Desktop\AAAAandroid\app\src\main\AndroidManifest.xml:52:17-37
+		ADDED from C:\Users\PC\Desktop\AAAcopy\AAAAandroid\app\src\main\AndroidManifest.xml:52:17-37
 	android:name
-		ADDED from C:\Users\PC\Desktop\AAAAandroid\app\src\main\AndroidManifest.xml:51:17-53
+		ADDED from C:\Users\PC\Desktop\AAAcopy\AAAAandroid\app\src\main\AndroidManifest.xml:51:17-53
 uses-sdk
-INJECTED from C:\Users\PC\Desktop\AAAAandroid\app\src\main\AndroidManifest.xml reason: use-sdk injection requested
-INJECTED from C:\Users\PC\Desktop\AAAAandroid\app\src\main\AndroidManifest.xml
-INJECTED from C:\Users\PC\Desktop\AAAAandroid\app\src\main\AndroidManifest.xml
+INJECTED from C:\Users\PC\Desktop\AAAcopy\AAAAandroid\app\src\main\AndroidManifest.xml reason: use-sdk injection requested
+INJECTED from C:\Users\PC\Desktop\AAAcopy\AAAAandroid\app\src\main\AndroidManifest.xml
+INJECTED from C:\Users\PC\Desktop\AAAcopy\AAAAandroid\app\src\main\AndroidManifest.xml
 MERGED from [androidx.databinding:viewbinding:7.3.0] C:\Users\PC\.gradle\caches\8.9\transforms\99657bac000fbb93f6108644f8b77975\transformed\viewbinding-7.3.0\AndroidManifest.xml:5:5-7:41
 MERGED from [androidx.databinding:viewbinding:7.3.0] C:\Users\PC\.gradle\caches\8.9\transforms\99657bac000fbb93f6108644f8b77975\transformed\viewbinding-7.3.0\AndroidManifest.xml:5:5-7:41
 MERGED from [androidx.navigation:navigation-fragment-ktx:2.5.3] C:\Users\PC\.gradle\caches\8.9\transforms\0d716d3d1861c1ccc9d01b4f0f7f0882\transformed\navigation-fragment-ktx-2.5.3\AndroidManifest.xml:20:5-22:41
@@ -241,6 +242,8 @@ MERGED from [androidx.camera:camera-core:1.2.0-alpha02] C:\Users\PC\.gradle\cach
 MERGED from [androidx.camera:camera-core:1.2.0-alpha02] C:\Users\PC\.gradle\caches\8.9\transforms\d8208c465dae65289abbebdc5d2c034d\transformed\camera-core-1.2.0-alpha02\AndroidManifest.xml:21:5-22:38
 MERGED from [com.google.mediapipe:tasks-vision:0.10.26] C:\Users\PC\.gradle\caches\8.9\transforms\fd876cb4a2c779203c86fb783a58ac0f\transformed\tasks-vision-0.10.26\AndroidManifest.xml:5:5-7:41
 MERGED from [com.google.mediapipe:tasks-vision:0.10.26] C:\Users\PC\.gradle\caches\8.9\transforms\fd876cb4a2c779203c86fb783a58ac0f\transformed\tasks-vision-0.10.26\AndroidManifest.xml:5:5-7:41
+MERGED from [androidx.core:core-splashscreen:1.0.1] C:\Users\PC\.gradle\caches\8.9\transforms\5e110569fedec3150c23dbba28de4ee1\transformed\core-splashscreen-1.0.1\AndroidManifest.xml:20:5-22:41
+MERGED from [androidx.core:core-splashscreen:1.0.1] C:\Users\PC\.gradle\caches\8.9\transforms\5e110569fedec3150c23dbba28de4ee1\transformed\core-splashscreen-1.0.1\AndroidManifest.xml:20:5-22:41
 MERGED from [androidx.emoji2:emoji2-views-helper:1.2.0] C:\Users\PC\.gradle\caches\8.9\transforms\cedde7d3621e4639d2a80a224882488b\transformed\emoji2-views-helper-1.2.0\AndroidManifest.xml:5:5-44
 MERGED from [androidx.emoji2:emoji2-views-helper:1.2.0] C:\Users\PC\.gradle\caches\8.9\transforms\cedde7d3621e4639d2a80a224882488b\transformed\emoji2-views-helper-1.2.0\AndroidManifest.xml:5:5-44
 MERGED from [androidx.emoji2:emoji2:1.2.0] C:\Users\PC\.gradle\caches\8.9\transforms\73440663b556764e1bd9bd094ae27724\transformed\emoji2-1.2.0\AndroidManifest.xml:21:5-44
@@ -311,16 +314,16 @@ MERGED from [com.google.firebase:firebase-encoders-json:18.0.0] C:\Users\PC\.gra
 MERGED from [com.google.firebase:firebase-encoders-json:18.0.0] C:\Users\PC\.gradle\caches\8.9\transforms\9f5f8f66901d606c6b7b792d62c762ff\transformed\firebase-encoders-json-18.0.0\AndroidManifest.xml:19:5-21:41
 MERGED from [androidx.annotation:annotation-experimental:1.1.0] C:\Users\PC\.gradle\caches\8.9\transforms\24c70d20b1ef3702d898fdb683d720cb\transformed\annotation-experimental-1.1.0\AndroidManifest.xml:20:5-22:41
 MERGED from [androidx.annotation:annotation-experimental:1.1.0] C:\Users\PC\.gradle\caches\8.9\transforms\24c70d20b1ef3702d898fdb683d720cb\transformed\annotation-experimental-1.1.0\AndroidManifest.xml:20:5-22:41
-INJECTED from C:\Users\PC\Desktop\AAAAandroid\app\src\main\AndroidManifest.xml
-INJECTED from C:\Users\PC\Desktop\AAAAandroid\app\src\main\AndroidManifest.xml
+INJECTED from C:\Users\PC\Desktop\AAAcopy\AAAAandroid\app\src\main\AndroidManifest.xml
+INJECTED from C:\Users\PC\Desktop\AAAcopy\AAAAandroid\app\src\main\AndroidManifest.xml
 	android:targetSdkVersion
-		INJECTED from C:\Users\PC\Desktop\AAAAandroid\app\src\main\AndroidManifest.xml
-		ADDED from C:\Users\PC\Desktop\AAAAandroid\app\src\main\AndroidManifest.xml
-		INJECTED from C:\Users\PC\Desktop\AAAAandroid\app\src\main\AndroidManifest.xml
+		INJECTED from C:\Users\PC\Desktop\AAAcopy\AAAAandroid\app\src\main\AndroidManifest.xml
+		ADDED from C:\Users\PC\Desktop\AAAcopy\AAAAandroid\app\src\main\AndroidManifest.xml
+		INJECTED from C:\Users\PC\Desktop\AAAcopy\AAAAandroid\app\src\main\AndroidManifest.xml
 	android:minSdkVersion
-		INJECTED from C:\Users\PC\Desktop\AAAAandroid\app\src\main\AndroidManifest.xml
-		ADDED from C:\Users\PC\Desktop\AAAAandroid\app\src\main\AndroidManifest.xml
-		INJECTED from C:\Users\PC\Desktop\AAAAandroid\app\src\main\AndroidManifest.xml
+		INJECTED from C:\Users\PC\Desktop\AAAcopy\AAAAandroid\app\src\main\AndroidManifest.xml
+		ADDED from C:\Users\PC\Desktop\AAAcopy\AAAAandroid\app\src\main\AndroidManifest.xml
+		INJECTED from C:\Users\PC\Desktop\AAAcopy\AAAAandroid\app\src\main\AndroidManifest.xml
 uses-library#androidx.window.extensions
 ADDED from [androidx.window:window:1.1.0-alpha03] C:\Users\PC\.gradle\caches\8.9\transforms\0741d81f48b5dbcac4f2b73652e06d3f\transformed\window-1.1.0-alpha03\AndroidManifest.xml:23:9-25:40
 	android:required

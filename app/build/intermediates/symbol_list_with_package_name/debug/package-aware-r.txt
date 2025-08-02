@@ -933,6 +933,7 @@ attr popupMenuBackground
 attr popupMenuStyle
 attr popupTheme
 attr popupWindowStyle
+attr postSplashScreenTheme
 attr prefixText
 attr prefixTextAppearance
 attr prefixTextColor
@@ -1023,6 +1024,7 @@ attr spanCount
 attr spinBars
 attr spinnerDropDownItemStyle
 attr spinnerStyle
+attr splashScreenIconSize
 attr splitLayoutDirection
 attr splitMinSmallestWidth
 attr splitMinWidth
@@ -1277,6 +1279,10 @@ attr windowFixedWidthMinor
 attr windowMinWidthMajor
 attr windowMinWidthMinor
 attr windowNoTitle
+attr windowSplashScreenAnimatedIcon
+attr windowSplashScreenAnimationDuration
+attr windowSplashScreenBackground
+attr windowSplashScreenIconBackgroundColor
 attr yearSelectedStyle
 attr yearStyle
 attr yearTodayStyle
@@ -2522,6 +2528,13 @@ dimen notification_top_pad
 dimen notification_top_pad_large_text
 dimen round_button_medium
 dimen sliding_pane_detail_pane_width
+dimen splashscreen_icon_mask_size_no_background
+dimen splashscreen_icon_mask_size_with_background
+dimen splashscreen_icon_mask_stroke_no_background
+dimen splashscreen_icon_mask_stroke_with_background
+dimen splashscreen_icon_size
+dimen splashscreen_icon_size_no_background
+dimen splashscreen_icon_size_with_background
 dimen stroke_small
 dimen tooltip_corner_radius
 dimen tooltip_horizontal_padding
@@ -2612,6 +2625,7 @@ drawable abc_textfield_search_material
 drawable abc_vector_test
 drawable avd_hide_password
 drawable avd_show_password
+drawable background
 drawable btn_checkbox_checked_mtrl
 drawable btn_checkbox_checked_to_unchecked_mtrl_animation
 drawable btn_checkbox_unchecked_mtrl
@@ -2620,6 +2634,8 @@ drawable btn_radio_off_mtrl
 drawable btn_radio_off_to_on_mtrl_animation
 drawable btn_radio_on_mtrl
 drawable btn_radio_on_to_off_mtrl_animation
+drawable compat_splash_screen
+drawable compat_splash_screen_no_icon_background
 drawable design_fab_background
 drawable design_ic_visibility
 drawable design_ic_visibility_off
@@ -2630,6 +2646,7 @@ drawable ic_baseline_photo_camera_24
 drawable ic_baseline_photo_library_24
 drawable ic_clock_black_24dp
 drawable ic_keyboard_black_24dp
+drawable ic_launcher_background
 drawable ic_m3_chip_check
 drawable ic_m3_chip_checked_circle
 drawable ic_m3_chip_close
@@ -2643,6 +2660,8 @@ drawable ic_plus
 drawable ic_rock
 drawable ic_scissors
 drawable icn_chevron_up
+drawable icon_background
+drawable logo
 drawable m3_appbar_background
 drawable m3_popupmenu_background_overlay
 drawable m3_radiobutton_ripple
@@ -2662,6 +2681,7 @@ drawable material_ic_keyboard_arrow_right_black_24dp
 drawable material_ic_menu_arrow_down_black_24dp
 drawable material_ic_menu_arrow_up_black_24dp
 drawable media_pipe_banner
+drawable menu
 drawable mtrl_bottomsheet_drag_handle
 drawable mtrl_checkbox_button
 drawable mtrl_checkbox_button_checked_unchecked
@@ -2712,6 +2732,15 @@ drawable notification_template_icon_bg
 drawable notification_template_icon_low_bg
 drawable notification_tile_bg
 drawable notify_panel_notification_icon_bg
+drawable paperenemy
+drawable paperown
+drawable play_cpu
+drawable play_multiplayer
+drawable rockenemy
+drawable rockown
+drawable scissorsenemy
+drawable scissorsown
+drawable splash_icon
 drawable test_level_drawable
 drawable tooltip_frame_dark
 drawable tooltip_frame_light
@@ -2809,6 +2838,7 @@ id autoComplete
 id autoCompleteToEnd
 id autoCompleteToStart
 id back_to_menu_button
+id backgroundImage
 id barrier
 id baseline
 id beginOnFirstDraw
@@ -2980,6 +3010,7 @@ id linear
 id listMode
 id list_item
 id locale
+id logoImage
 id ltr
 id marquee
 id masked
@@ -3004,6 +3035,7 @@ id material_timepicker_ok_button
 id material_timepicker_view
 id material_value_index
 id matrix
+id menuImage
 id menu_fragment
 id message
 id middle
@@ -3042,7 +3074,6 @@ id multiply
 id nav_controller_view_tag
 id nav_graph
 id nav_host_fragment_container
-id navigation
 id navigation_bar_item_active_indicator_view
 id navigation_bar_item_icon_container
 id navigation_bar_item_icon_view
@@ -3082,8 +3113,9 @@ id percent
 id performance
 id permissions_fragment
 id pin
+id playCpuButton
+id playMultiplayerButton
 id play_again_button
-id play_button
 id player_score_text
 id position
 id postLayout
@@ -3149,6 +3181,7 @@ id south
 id spacer
 id special_effects_controller_view_tag
 id spinner_delegate
+id splashscreen_icon_view
 id spline
 id split_action_bar
 id spread
@@ -3205,7 +3238,6 @@ id title
 id titleDividerNoCustom
 id title_template
 id toggle
-id toolbar
 id top
 id topPanel
 id touch_outside
@@ -3230,7 +3262,6 @@ id up
 id useLogo
 id vertical_only
 id videoView
-id view
 id view_finder
 id view_offset_helper
 id view_transition
@@ -3257,6 +3288,7 @@ integer bottom_sheet_slide_duration
 integer cancel_button_image_alpha
 integer config_navAnimTime
 integer config_tooltipAnimTime
+integer default_icon_animation_duration
 integer design_snackbar_text_max_lines
 integer design_tab_indicator_anim_duration_ms
 integer hide_password_duration
@@ -3452,9 +3484,11 @@ layout notification_template_part_time
 layout select_dialog_item_material
 layout select_dialog_multichoice_material
 layout select_dialog_singlechoice_material
+layout splash_screen_view
 layout support_simple_spinner_dropdown_item
 menu menu_bottom_nav
 mipmap ic_launcher
+mipmap ic_launcher_foreground
 mipmap ic_launcher_round
 navigation nav_graph
 plurals mtrl_badge_content_description
@@ -3729,6 +3763,9 @@ style Base_Theme_MaterialComponents_Light_Dialog_Bridge
 style Base_Theme_MaterialComponents_Light_Dialog_FixedSize
 style Base_Theme_MaterialComponents_Light_Dialog_MinWidth
 style Base_Theme_MaterialComponents_Light_DialogWhenLarge
+style Base_Theme_SplashScreen
+style Base_Theme_SplashScreen_DayNight
+style Base_Theme_SplashScreen_Light
 style Base_ThemeOverlay_AppCompat
 style Base_ThemeOverlay_AppCompat_ActionBar
 style Base_ThemeOverlay_AppCompat_Dark
@@ -3890,6 +3927,10 @@ style Base_Widget_MaterialComponents_Snackbar
 style Base_Widget_MaterialComponents_TextInputEditText
 style Base_Widget_MaterialComponents_TextInputLayout
 style Base_Widget_MaterialComponents_TextView
+style Base_v21_Theme_SplashScreen
+style Base_v21_Theme_SplashScreen_Light
+style Base_v27_Theme_SplashScreen
+style Base_v27_Theme_SplashScreen_Light
 style BottomSheetSpinnerItemStyle
 style CardView
 style CardView_Dark
@@ -4106,6 +4147,7 @@ style TextAppearance_MaterialComponents_Tooltip
 style TextAppearance_Widget_AppCompat_ExpandedMenu_Item
 style TextAppearance_Widget_AppCompat_Toolbar_Subtitle
 style TextAppearance_Widget_AppCompat_Toolbar_Title
+style Theme_App_Starting
 style Theme_AppCompat
 style Theme_AppCompat_CompactMenu
 style Theme_AppCompat_DayNight
@@ -4206,6 +4248,9 @@ style Theme_MaterialComponents_Light_NoActionBar
 style Theme_MaterialComponents_Light_NoActionBar_Bridge
 style Theme_MaterialComponents_NoActionBar
 style Theme_MaterialComponents_NoActionBar_Bridge
+style Theme_SplashScreen
+style Theme_SplashScreen_Common
+style Theme_SplashScreen_IconBackground
 style ThemeOverlay_AppCompat
 style ThemeOverlay_AppCompat_ActionBar
 style ThemeOverlay_AppCompat_Dark

@@ -34,7 +34,7 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:taskAffinity=""
-        android:theme="@style/Theme.GestureRecognizer"
+        android:theme="@style/Theme.App.Starting"
         tools:ignore="AllowBackup">
 
         <activity

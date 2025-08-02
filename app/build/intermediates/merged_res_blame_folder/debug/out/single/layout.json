@@ -1,30 +1,30 @@
 [
     {
-        "merged": "com.google.mediapipe.examples.gesturerecognizer.app-mergeDebugResources-48:/layout/fragment_camera.xml",
-        "source": "com.google.mediapipe.examples.gesturerecognizer.app-main-51:/layout/fragment_camera.xml"
+        "merged": "C:\\Users\\PC\\.gradle\\daemon\\8.9\\com.google.mediapipe.examples.gesturerecognizer.app-mergeDebugResources-49:\\layout\\info_bottom_sheet.xml",
+        "source": "C:\\Users\\PC\\.gradle\\daemon\\8.9\\com.google.mediapipe.examples.gesturerecognizer.app-main-52:\\layout\\info_bottom_sheet.xml"
     },
     {
-        "merged": "C:\\Users\\PC\\.gradle\\daemon\\8.9\\com.google.mediapipe.examples.gesturerecognizer.app-mergeDebugResources-48:\\layout\\fragment_gallery.xml",
-        "source": "C:\\Users\\PC\\.gradle\\daemon\\8.9\\com.google.mediapipe.examples.gesturerecognizer.app-main-51:\\layout\\fragment_gallery.xml"
+        "merged": "C:\\Users\\PC\\.gradle\\daemon\\8.9\\com.google.mediapipe.examples.gesturerecognizer.app-mergeDebugResources-49:\\layout\\item_gesture_recognizer_result.xml",
+        "source": "C:\\Users\\PC\\.gradle\\daemon\\8.9\\com.google.mediapipe.examples.gesturerecognizer.app-main-52:\\layout\\item_gesture_recognizer_result.xml"
     },
     {
-        "merged": "C:\\Users\\PC\\.gradle\\daemon\\8.9\\com.google.mediapipe.examples.gesturerecognizer.app-mergeDebugResources-48:\\layout\\item_gesture_recognizer_result.xml",
-        "source": "C:\\Users\\PC\\.gradle\\daemon\\8.9\\com.google.mediapipe.examples.gesturerecognizer.app-main-51:\\layout\\item_gesture_recognizer_result.xml"
+        "merged": "C:\\Users\\PC\\.gradle\\daemon\\8.9\\com.google.mediapipe.examples.gesturerecognizer.app-mergeDebugResources-49:\\layout\\activity_main.xml",
+        "source": "C:\\Users\\PC\\.gradle\\daemon\\8.9\\com.google.mediapipe.examples.gesturerecognizer.app-main-52:\\layout\\activity_main.xml"
     },
     {
-        "merged": "C:\\Users\\PC\\.gradle\\daemon\\8.9\\com.google.mediapipe.examples.gesturerecognizer.app-mergeDebugResources-48:\\layout\\info_bottom_sheet.xml",
-        "source": "C:\\Users\\PC\\.gradle\\daemon\\8.9\\com.google.mediapipe.examples.gesturerecognizer.app-main-51:\\layout\\info_bottom_sheet.xml"
+        "merged": "com.google.mediapipe.examples.gesturerecognizer.app-mergeDebugResources-49:/layout/fragment_menu.xml",
+        "source": "com.google.mediapipe.examples.gesturerecognizer.app-main-52:/layout/fragment_menu.xml"
     },
     {
-        "merged": "C:\\Users\\PC\\.gradle\\daemon\\8.9\\com.google.mediapipe.examples.gesturerecognizer.app-mergeDebugResources-48:\\layout\\fragment_camera.xml",
-        "source": "C:\\Users\\PC\\.gradle\\daemon\\8.9\\com.google.mediapipe.examples.gesturerecognizer.app-main-51:\\layout\\fragment_camera.xml"
+        "merged": "C:\\Users\\PC\\.gradle\\daemon\\8.9\\com.google.mediapipe.examples.gesturerecognizer.app-mergeDebugResources-49:\\layout\\fragment_camera.xml",
+        "source": "C:\\Users\\PC\\.gradle\\daemon\\8.9\\com.google.mediapipe.examples.gesturerecognizer.app-main-52:\\layout\\fragment_camera.xml"
     },
     {
-        "merged": "C:\\Users\\PC\\.gradle\\daemon\\8.9\\com.google.mediapipe.examples.gesturerecognizer.app-mergeDebugResources-48:\\layout\\activity_main.xml",
-        "source": "C:\\Users\\PC\\.gradle\\daemon\\8.9\\com.google.mediapipe.examples.gesturerecognizer.app-main-51:\\layout\\activity_main.xml"
+        "merged": "C:\\Users\\PC\\.gradle\\daemon\\8.9\\com.google.mediapipe.examples.gesturerecognizer.app-mergeDebugResources-49:\\layout\\fragment_gallery.xml",
+        "source": "C:\\Users\\PC\\.gradle\\daemon\\8.9\\com.google.mediapipe.examples.gesturerecognizer.app-main-52:\\layout\\fragment_gallery.xml"
     },
     {
-        "merged": "com.google.mediapipe.examples.gesturerecognizer.app-mergeDebugResources-48:/layout/fragment_menu.xml",
-        "source": "com.google.mediapipe.examples.gesturerecognizer.app-main-51:/layout/fragment_menu.xml"
+        "merged": "C:\\Users\\PC\\.gradle\\daemon\\8.9\\com.google.mediapipe.examples.gesturerecognizer.app-mergeDebugResources-49:\\layout\\fragment_menu.xml",
+        "source": "C:\\Users\\PC\\.gradle\\daemon\\8.9\\com.google.mediapipe.examples.gesturerecognizer.app-main-52:\\layout\\fragment_menu.xml"
     }
 ]

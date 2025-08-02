@@ -22,24 +22,24 @@
 22
 23    <uses-sdk
 24        android:minSdkVersion="24"
-24-->C:\Users\PC\Desktop\AAAAandroid\app\src\main\AndroidManifest.xml
+24-->C:\Users\PC\Desktop\AAAcopy\AAAAandroid\app\src\main\AndroidManifest.xml
 25        android:targetSdkVersion="32" />
-25-->C:\Users\PC\Desktop\AAAAandroid\app\src\main\AndroidManifest.xml
+25-->C:\Users\PC\Desktop\AAAcopy\AAAAandroid\app\src\main\AndroidManifest.xml
 26
 27    <!-- Enable instant app support -->
 28    <dist:module dist:instant="true" />
-28-->C:\Users\PC\Desktop\AAAAandroid\app\src\main\AndroidManifest.xml:22:5-40
-28-->C:\Users\PC\Desktop\AAAAandroid\app\src\main\AndroidManifest.xml:22:18-37
+28-->C:\Users\PC\Desktop\AAAcopy\AAAAandroid\app\src\main\AndroidManifest.xml:22:5-40
+28-->C:\Users\PC\Desktop\AAAcopy\AAAAandroid\app\src\main\AndroidManifest.xml:22:18-37
 29
 30    <!-- Declare features -->
 31    <uses-feature android:name="android.hardware.camera" />
-31-->C:\Users\PC\Desktop\AAAAandroid\app\src\main\AndroidManifest.xml:25:5-60
-31-->C:\Users\PC\Desktop\AAAAandroid\app\src\main\AndroidManifest.xml:25:19-57
+31-->C:\Users\PC\Desktop\AAAcopy\AAAAandroid\app\src\main\AndroidManifest.xml:25:5-60
+31-->C:\Users\PC\Desktop\AAAcopy\AAAAandroid\app\src\main\AndroidManifest.xml:25:19-57
 32
 33    <!-- Declare permissions -->
 34    <uses-permission android:name="android.permission.CAMERA" />
-34-->C:\Users\PC\Desktop\AAAAandroid\app\src\main\AndroidManifest.xml:28:5-65
-34-->C:\Users\PC\Desktop\AAAAandroid\app\src\main\AndroidManifest.xml:28:22-62
+34-->C:\Users\PC\Desktop\AAAcopy\AAAAandroid\app\src\main\AndroidManifest.xml:28:5-65
+34-->C:\Users\PC\Desktop\AAAcopy\AAAAandroid\app\src\main\AndroidManifest.xml:28:22-62
 35
 36    <!-- Although the *SdkVersion is captured in gradle build files, this is required for non gradle builds -->
 37    <!-- <uses-sdk android:minSdkVersion="14"/> -->
@@ -51,50 +51,50 @@
 39-->[com.google.android.datatransport:transport-backend-cct:3.1.0] C:\Users\PC\.gradle\caches\8.9\transforms\4ac34efd1de8649b105bd435c78e42ba\transformed\transport-backend-cct-3.1.0\AndroidManifest.xml:26:22-64
 40
 41    <application
-41-->C:\Users\PC\Desktop\AAAAandroid\app\src\main\AndroidManifest.xml:30:5-54:19
+41-->C:\Users\PC\Desktop\AAAcopy\AAAAandroid\app\src\main\AndroidManifest.xml:30:5-54:19
 42        android:allowBackup="true"
-42-->C:\Users\PC\Desktop\AAAAandroid\app\src\main\AndroidManifest.xml:31:9-35
+42-->C:\Users\PC\Desktop\AAAcopy\AAAAandroid\app\src\main\AndroidManifest.xml:31:9-35
 43        android:appComponentFactory="androidx.core.app.CoreComponentFactory"
 43-->[androidx.core:core:1.8.0] C:\Users\PC\.gradle\caches\8.9\transforms\9439ebeccd8bacccc5e10d0bc580c5d0\transformed\core-1.8.0\AndroidManifest.xml:24:18-86
 44        android:debuggable="true"
 45        android:extractNativeLibs="false"
 46        android:icon="@mipmap/ic_launcher"
-46-->C:\Users\PC\Desktop\AAAAandroid\app\src\main\AndroidManifest.xml:32:9-43
+46-->C:\Users\PC\Desktop\AAAcopy\AAAAandroid\app\src\main\AndroidManifest.xml:32:9-43
 47        android:label="@string/app_name"
-47-->C:\Users\PC\Desktop\AAAAandroid\app\src\main\AndroidManifest.xml:33:9-41
+47-->C:\Users\PC\Desktop\AAAcopy\AAAAandroid\app\src\main\AndroidManifest.xml:33:9-41
 48        android:roundIcon="@mipmap/ic_launcher_round"
-48-->C:\Users\PC\Desktop\AAAAandroid\app\src\main\AndroidManifest.xml:34:9-54
+48-->C:\Users\PC\Desktop\AAAcopy\AAAAandroid\app\src\main\AndroidManifest.xml:34:9-54
 49        android:supportsRtl="true"
-49-->C:\Users\PC\Desktop\AAAAandroid\app\src\main\AndroidManifest.xml:35:9-35
+49-->C:\Users\PC\Desktop\AAAcopy\AAAAandroid\app\src\main\AndroidManifest.xml:35:9-35
 50        android:taskAffinity=""
-50-->C:\Users\PC\Desktop\AAAAandroid\app\src\main\AndroidManifest.xml:36:9-32
+50-->C:\Users\PC\Desktop\AAAcopy\AAAAandroid\app\src\main\AndroidManifest.xml:36:9-32
 51        android:testOnly="true"
-52        android:theme="@style/Theme.GestureRecognizer" >
-52-->C:\Users\PC\Desktop\AAAAandroid\app\src\main\AndroidManifest.xml:37:9-55
+52        android:theme="@style/Theme.App.Starting" >
+52-->C:\Users\PC\Desktop\AAAcopy\AAAAandroid\app\src\main\AndroidManifest.xml:37:9-50
 53        <activity
-53-->C:\Users\PC\Desktop\AAAAandroid\app\src\main\AndroidManifest.xml:40:9-53:20
+53-->C:\Users\PC\Desktop\AAAcopy\AAAAandroid\app\src\main\AndroidManifest.xml:40:9-53:20
 54            android:name="com.google.mediapipe.examples.gesturerecognizer.MainActivity"
-54-->C:\Users\PC\Desktop\AAAAandroid\app\src\main\AndroidManifest.xml:41:13-41
+54-->C:\Users\PC\Desktop\AAAcopy\AAAAandroid\app\src\main\AndroidManifest.xml:41:13-41
 55            android:exported="true" >
-55-->C:\Users\PC\Desktop\AAAAandroid\app\src\main\AndroidManifest.xml:42:13-36
+55-->C:\Users\PC\Desktop\AAAcopy\AAAAandroid\app\src\main\AndroidManifest.xml:42:13-36
 56            <intent-filter>
-56-->C:\Users\PC\Desktop\AAAAandroid\app\src\main\AndroidManifest.xml:43:13-47:29
+56-->C:\Users\PC\Desktop\AAAcopy\AAAAandroid\app\src\main\AndroidManifest.xml:43:13-47:29
 57                <action android:name="android.intent.action.MAIN" />
-57-->C:\Users\PC\Desktop\AAAAandroid\app\src\main\AndroidManifest.xml:44:17-69
-57-->C:\Users\PC\Desktop\AAAAandroid\app\src\main\AndroidManifest.xml:44:25-66
+57-->C:\Users\PC\Desktop\AAAcopy\AAAAandroid\app\src\main\AndroidManifest.xml:44:17-69
+57-->C:\Users\PC\Desktop\AAAcopy\AAAAandroid\app\src\main\AndroidManifest.xml:44:25-66
 58
 59                <category android:name="android.intent.category.LAUNCHER" />
-59-->C:\Users\PC\Desktop\AAAAandroid\app\src\main\AndroidManifest.xml:46:17-77
-59-->C:\Users\PC\Desktop\AAAAandroid\app\src\main\AndroidManifest.xml:46:27-74
+59-->C:\Users\PC\Desktop\AAAcopy\AAAAandroid\app\src\main\AndroidManifest.xml:46:17-77
+59-->C:\Users\PC\Desktop\AAAcopy\AAAAandroid\app\src\main\AndroidManifest.xml:46:27-74
 60            </intent-filter>
 61
 62            <!-- Declare notch support -->
 63            <meta-data
-63-->C:\Users\PC\Desktop\AAAAandroid\app\src\main\AndroidManifest.xml:50:13-52:40
+63-->C:\Users\PC\Desktop\AAAcopy\AAAAandroid\app\src\main\AndroidManifest.xml:50:13-52:40
 64                android:name="android.notch_support"
-64-->C:\Users\PC\Desktop\AAAAandroid\app\src\main\AndroidManifest.xml:51:17-53
+64-->C:\Users\PC\Desktop\AAAcopy\AAAAandroid\app\src\main\AndroidManifest.xml:51:17-53
 65                android:value="true" />
-65-->C:\Users\PC\Desktop\AAAAandroid\app\src\main\AndroidManifest.xml:52:17-37
+65-->C:\Users\PC\Desktop\AAAcopy\AAAAandroid\app\src\main\AndroidManifest.xml:52:17-37
 66        </activity>
 67
 68        <uses-library

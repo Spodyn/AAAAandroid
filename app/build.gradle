@@ -99,4 +99,7 @@ dependencies {
 
     // Mediapipe Library
     implementation 'com.google.mediapipe:tasks-vision:0.10.26'
+
+    //Loading screen
+    implementation 'androidx.core:core-splashscreen:1.0.1'
 }
